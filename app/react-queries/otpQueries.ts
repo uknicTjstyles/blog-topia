@@ -9,13 +9,13 @@ type VerifyOtpPayload = {
 type ResendOtpPayload = {
   email: string;
 };
-const base_url = process.env.NEXT_BASE_URL;
+// const base_url = process.env.NEXT_BASE_URL;
 
 // API call to verify OTP
 async function verifyOtp(payload: VerifyOtpPayload) {
     
 
-  const response = await fetch(`${base_url}/auth/users/verify-account`, {
+  const response = await fetch(`/api/auth/users/verify-account`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -33,7 +33,7 @@ async function verifyOtp(payload: VerifyOtpPayload) {
 
 // API call to resend OTP
 async function resendOtp(payload: ResendOtpPayload) {
-  const response = await fetch(`${base_url}/auth/users/resend-otp`, {
+  const response = await fetch(`/api/auth/users/resend-otp`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

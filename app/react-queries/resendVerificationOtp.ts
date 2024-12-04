@@ -11,9 +11,9 @@ interface RegisterFormValues {
 }
 
 const resendOtpForUser = async (data: RegisterFormValues) => {
-const base_url = process.env.NEXT_BASE_URL;
+// const base_url = process.env.NEXT_BASE_URL;
 
-    const response = await fetch(`${base_url}/auth/users/resend-otp`, {
+    const response = await fetch(`/api/auth/users/resend-otp`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

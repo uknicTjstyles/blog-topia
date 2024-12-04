@@ -12,9 +12,9 @@ interface RegisterFormValues {
 }
 
 const registerUser = async (data: RegisterFormValues) => {
-    const base_url = process.env.NEXT_BASE_URL;
+    // const base_url = process.env.NEXT_BASE_URL;
 
-    const response = await fetch(`${base_url}/auth/users/register`, {
+    const response = await fetch(`/api/auth/users/register`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
