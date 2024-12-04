@@ -11,7 +11,7 @@ type loginDetails = {
 
 
 const loginUser = async (data:loginDetails) =>{
-    const base_url = process.env.NEXT_BASE_URL || 'http://localhost:3000/api';
+    const base_url = process.env.NEXT_BASE_URL;
 
     const response = await fetch(`${base_url}/auth/users/sign-in`, {
         method: 'POST',

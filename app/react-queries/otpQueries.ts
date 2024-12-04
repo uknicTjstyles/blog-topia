@@ -9,7 +9,7 @@ type VerifyOtpPayload = {
 type ResendOtpPayload = {
   email: string;
 };
-const base_url = process.env.NEXT_BASE_URL || 'http://localhost:3000/api';
+const base_url = process.env.NEXT_BASE_URL;
 
 // API call to verify OTP
 async function verifyOtp(payload: VerifyOtpPayload) {

@@ -11,7 +11,7 @@ interface RegisterFormValues {
 }
 
 const verifyUser = async (data: RegisterFormValues) => {
-const base_url = process.env.NEXT_BASE_URL || 'http://localhost:3000/api'
+const base_url = process.env.NEXT_BASE_URL;
 
     const response = await fetch(`${base_url}/auth/users/verify-account`, {
     method: 'POST',
